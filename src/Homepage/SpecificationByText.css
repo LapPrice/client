@@ -1,0 +1,11 @@
+.specification-text {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: calc((100% - 1116px) / 2); 
+    line-height: 1.2;
+    text-align: left;
+    color: #000; 
+    position: relative;
+    margin-bottom: 10px;
+}

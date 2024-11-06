@@ -1,5 +1,13 @@
+import React from "react";
+import Homepage from "./Homepage/Homepage"
+
 function App() {
-  return <div>초기세팅완료</div>;
+  return (
+    <div>
+      <br/>
+      <Homepage />
+    </div>
+  );
 }
 
 export default App;
