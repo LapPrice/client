@@ -7,17 +7,21 @@
     gap: 20px;
     padding: 30px 20px;
     background-color: #FFFFFF;
-    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     z-index: 2;
     box-sizing: border-box;
     position: relative;
 }
 
+
+
 .specification-box:hover {
     background-color: #D0D0D0;
     transform: translateY(-5px);
 }
+
+
 
 .specification-item:not(:last-child) {
     display: flex;
@@ -27,7 +31,7 @@
     height: 50px;
     background: #FFFFFF;
     border: 1px solid #DBE0E6;
-    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
@@ -36,6 +40,13 @@
     cursor: pointer;
     box-sizing: border-box;
 }
+
+.specification-item:hover {
+    background-color: #F0F4F8;
+    border-color: #B0BEC5;
+    transform: translateY(-3px);
+}
+
 
 .specification-item:last-child {
     display: flex;
@@ -51,3 +62,30 @@
     cursor: pointer;
     box-sizing: border-box;
 }
+
+.specification-item.active {
+    background-color: #4285F4;
+    color: #FFFFFF;
+    border: none;
+}
+
+
+@media (max-width: 768px) {
+    .SelectLaptop {
+        width: 100%;
+        left: 0;
+    }
+
+    .specification-box {
+        width: 90%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .specification-item {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
