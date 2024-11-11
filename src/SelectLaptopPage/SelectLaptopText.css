@@ -1,0 +1,19 @@
+.SelectLaptop-text {
+    position: absolute;
+    width: 301px;
+    height: 60px;
+    left: 163px;
+    top: 44px;
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 20px;
+    /* or 80% */
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+}
