@@ -1,12 +1,15 @@
+// App.jsx
 import React from "react";
-import Homepage from "./Homepage/Homepage"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SelectLaptopPage from "./SelectLaptopPage/SelectLaptopPage";
 
 function App() {
   return (
-    <div>
-      <br/>
-      <Homepage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SelectLaptopPage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,502 @@
+[
+    {
+        "name": "미개봉 LG그램 17인치 노트북",
+        "brand": "LG",
+        "CPU": "인텔 12세대 I5-1240P 프로세서",
+        "RAM": 16,
+        "INCH": 17,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1200000
+    },
+    {
+        "name": "삼성 갤럭시북 프로 15인치",
+        "brand": "SAMSUNG",
+        "CPU": "Intel Core i7 11th Gen",
+        "RAM": 16,
+        "INCH": 15,
+        "DISK": 512,
+        "GPU": "external",
+        "price": 1500000
+    },
+    {
+        "name": "Apple MacBook Air M1 13인치",
+        "brand": "APPLE",
+        "CPU": "Apple M1",
+        "RAM": 8,
+        "INCH": 13,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1350000
+    },
+    {
+        "name": "미개봉 ASUS ROG 16인치 게이밍 노트북",
+        "brand": "ASUS",
+        "CPU": "AMD Ryzen 9 5900HX",
+        "RAM": 32,
+        "INCH": 16,
+        "DISK": 1024,
+        "GPU": "external",
+        "price": 2300000
+    },
+    {
+        "name": "DELL XPS 13인치 노트북",
+        "brand": "DELL",
+        "CPU": "Intel Core i5 10th Gen",
+        "RAM": 8,
+        "INCH": 13,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1200000
+    },
+    {
+        "name": "HP 파빌리온 15인치 노트북",
+        "brand": "HP",
+        "CPU": "Intel Core i5 10th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 512,
+        "GPU": "internal",
+        "price": 900000
+    },
+    {
+        "name": "미개봉 Lenovo 아이디어패드 14인치",
+        "brand": "LENOVO",
+        "CPU": "Intel Celeron N4020",
+        "RAM": 4,
+        "INCH": 14,
+        "DISK": 128,
+        "GPU": "internal",
+        "price": 300000
+    },
+    {
+        "name": "HANSUNG TFX156",
+        "brand": "HANSUNG",
+        "CPU": "AMD Ryzen 5 4600H",
+        "RAM": 16,
+        "INCH": 15.6,
+        "DISK": 512,
+        "GPU": "external",
+        "price": 850000
+    },
+    {
+        "name": "Acer 아스파이어 3",
+        "brand": "ACER",
+        "CPU": "Intel Pentium Gold",
+        "RAM": 4,
+        "INCH": 15.6,
+        "DISK": 128,
+        "GPU": "internal",
+        "price": 350000
+    },
+    {
+        "name": "Apple MacBook Pro 16인치",
+        "brand": "APPLE",
+        "CPU": "Apple M1 Pro",
+        "RAM": 16,
+        "INCH": 16,
+        "DISK": 1024,
+        "GPU": "internal",
+        "price": 2800000
+    },
+    {
+        "name": "노트북 11",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 800000
+    },
+    {
+        "name": "노트북 12",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 810000
+    },
+    {
+        "name": "노트북 13",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 820000
+    },
+    {
+        "name": "노트북 14",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 830000
+    },
+    {
+        "name": "노트북 15",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 840000
+    },
+    {
+        "name": "노트북 16",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 850000
+    },
+    {
+        "name": "노트북 17",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 860000
+    },
+    {
+        "name": "노트북 18",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 870000
+    },
+    {
+        "name": "노트북 19",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 880000
+    },
+    {
+        "name": "노트북 20",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 890000
+    },
+    {
+        "name": "노트북 21",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 900000
+    },
+    {
+        "name": "노트북 22",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 910000
+    },
+    {
+        "name": "노트북 23",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 920000
+    },
+    {
+        "name": "노트북 24",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 930000
+    },
+    {
+        "name": "노트북 25",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 940000
+    },
+    {
+        "name": "노트북 26",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 950000
+    },
+    {
+        "name": "노트북 27",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 960000
+    },
+    {
+        "name": "노트북 28",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 970000
+    },
+    {
+        "name": "노트북 29",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 980000
+    },
+    {
+        "name": "노트북 30",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 990000
+    },
+    {
+        "name": "노트북 31",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1000000
+    },
+    {
+        "name": "노트북 32",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1010000
+    },
+    {
+        "name": "노트북 33",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1020000
+    },
+    {
+        "name": "노트북 34",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1030000
+    },
+    {
+        "name": "노트북 35",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1040000
+    },
+    {
+        "name": "노트북 36",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1050000
+    },
+    {
+        "name": "노트북 37",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1060000
+    },
+    {
+        "name": "노트북 38",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1070000
+    },
+    {
+        "name": "노트북 39",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1080000
+    },
+    {
+        "name": "노트북 40",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1090000
+    },
+    {
+        "name": "노트북 41",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1100000
+    },
+    {
+        "name": "노트북 42",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1110000
+    },
+    {
+        "name": "노트북 43",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1120000
+    },
+    {
+        "name": "노트북 44",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1130000
+    },
+    {
+        "name": "노트북 45",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1140000
+    },
+    {
+        "name": "노트북 46",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1150000
+    },
+    {
+        "name": "노트북 47",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1160000
+    },
+    {
+        "name": "노트북 48",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1170000
+    },
+    {
+        "name": "노트북 49",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1180000
+    },
+    {
+        "name": "노트북 50",
+        "brand": "unknown",
+        "CPU": "Intel Core i5 8th Gen",
+        "RAM": 8,
+        "INCH": 15,
+        "DISK": 256,
+        "GPU": "internal",
+        "price": 1190000
+    }
+]
