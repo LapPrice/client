@@ -40,7 +40,7 @@ const SelectLaptopPage = () => {
             });
           };
     //필터 선택 filterType = ex) CPU, GPU... filterValue = ex) i3, GTX 
-
+    //LaptopFilterList object => 동적 필터링?  
 
 
    
