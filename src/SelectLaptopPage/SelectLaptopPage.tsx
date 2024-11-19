@@ -45,8 +45,6 @@ const SelectLaptopPage = () => {
         const handleFilterClick = (filterType: string, filterValue: string) => { 
             navigate('/filterPage?filtertype=${filterType}');
           };
-    
-
 
 
    
