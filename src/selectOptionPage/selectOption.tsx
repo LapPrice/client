@@ -1,23 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import OptionCategory from "./Option/OptionCategory";
-import { useOption } from "./OptionContext"; // OptionContext 사용
+import { useOption } from "./OptionContext";
 import "./selectOption.css";
 
 const defaultOptions = {
   Brand: [
     "Acer", "ALLDOCUBE", "APPLE", "ASUS", "Basics", "Chuwi", "Dell", "Dicie",
     "Foryoudigital", "Gigabyte", "GPD", "Hansung", "HP", "Huawei", "Jooyon",
-    "Lenovo", "LG", "Microsoft", "MPGIO", "MSI", "Nextbook", "Razer", 
+    "Lenovo", "LG", "Microsoft", "MPGIO", "MSI", "Nextbook", "Razer",
     "Samsung", "Tedas", "Victrack", "ALL",
   ],
-  CPU: [
-    "i3", "i5", "i7", "i9",
-    "Ultra 5", "Ultra 7", "Ultra 9",
-    "Pentium Gold", "Pentium Silver", "Pentium",
-    "Celeron",
-    "Ryzen U", "Ryzen H", "Ryzen HS", "Ryzen HX"
-  ],
+  CPU: {
+    "Intel Core": ["i3", "i5", "i7", "i9"],
+    "Intel Ultra Core": ["Ultra 5", "Ultra 7", "Ultra 9"],
+    "Intel Pentium": ["Pentium Gold", "Pentium Silver", "Pentium"],
+    "Intel Celeron": ["Celeron"],
+    Ryzen: ["Ryzen U", "Ryzen H", "Ryzen HS", "Ryzen HX"],
+  },
   GPU: ["Internal", "External"],
   SSD: ["128GB", "256GB", "512GB", "1TB", "2TB", "4TB", "6TB"],
   RAM: ["4GB", "8GB", "16GB", "32GB", "64GB", "128GB"],
@@ -26,22 +26,22 @@ const defaultOptions = {
 
 const SelectOption: React.FC = () => {
   const navigate = useNavigate();
-  const { options, setOptions } = useOption(); // OptionContext 사용
+  const { options, setOptions } = useOption();
 
   const handleOptionClick = (category: keyof typeof options, option: string) => {
     setOptions((prev) => ({
       ...prev,
-      [category]: option,
+      [category]: prev[category] === option ? "" : option, // 선택된 옵션이면 취소
     }));
   };
 
   const handleNavigateToHome = () => {
-    navigate("/"); // 홈으로 이동
+    navigate("/");
   };
 
   const categories = [
     { title: "Brand", key: "Brand", options: defaultOptions.Brand },
-    { title: "CPU", key: "CPU", options: defaultOptions.CPU }, // CPU 카테고리 추가
+    { title: "CPU", key: "CPU", options: defaultOptions.CPU },
     { title: "GPU", key: "GPU", options: defaultOptions.GPU },
     { title: "SSD", key: "SSD", options: defaultOptions.SSD },
     { title: "RAM", key: "RAM", options: defaultOptions.RAM },
@@ -61,12 +61,12 @@ const SelectOption: React.FC = () => {
           onClick={(option) =>
             handleOptionClick(category.key as keyof typeof options, option)
           }
+          selectedOption={options[category.key as keyof typeof options]} // 선택된 옵션 전달
         />
       ))}
-      {/* 홈으로 이동 버튼 */}
-      <button className = "home-button" onClick={handleNavigateToHome}>
+      <button className="home-button" onClick={handleNavigateToHome}>
         <span>Go to Home</span>
-        </button>
+      </button>
     </div>
   );
 };

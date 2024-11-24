@@ -67,3 +67,15 @@
   background: #D6E4FF; /* 선택된 상태 배경 */
   border: 1px solid #4A90E2; /* 선택된 상태 테두리 */
 }
+
+.sub-category-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.sub-option-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
