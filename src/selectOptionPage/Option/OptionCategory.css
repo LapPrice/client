@@ -1,0 +1,69 @@
+.option-value-box {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  max-width: 900px; /* 전체 중앙 정렬을 위해 최대 폭 설정 */
+  margin: 10px 0; /* 카테고리 간 간격 */
+}
+
+.option-value {
+  align-self: stretch;
+  color: #121417;
+  font-feature-settings: 'dlig' on;
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 127.778% */
+}
+
+.option-container-box {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+    
+  gap: 20px;
+  width: 100%
+}
+
+.option-container {
+  display: flex;
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+  gap: 12px; /* 각 옵션 간 간격 */
+  width: 100%;  /* 수직 정렬 */
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image : url('../../../public/icons/OptionIcon.svg');
+  background-size: contain;
+}
+
+.option-box {
+  display: flex;
+  width: 223px;
+  padding: 16px;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #DBE0E5;
+  background: #FFF;
+}
+
+.option-box:hover {
+  background: #F0F0F0;
+}
+
+.option-box.selected {
+  background: #D6E4FF; /* 선택된 상태 배경 */
+  border: 1px solid #4A90E2; /* 선택된 상태 테두리 */
+}
