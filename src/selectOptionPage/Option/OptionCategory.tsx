@@ -6,6 +6,7 @@ interface OptionCategoryProps {
   options: string[] | { [subCategory: string]: string[] };
   onClick: (option: string) => void;
   selectedOption?: string; // 선택된 옵션
+  iconClass: string; // CSS 기반 아이콘 클래스명
 }
 
 const OptionCategory: React.FC<OptionCategoryProps> = ({
@@ -13,6 +14,7 @@ const OptionCategory: React.FC<OptionCategoryProps> = ({
   options,
   onClick,
   selectedOption,
+  iconClass,
 }) => {
   return (
     <span>
@@ -30,7 +32,8 @@ const OptionCategory: React.FC<OptionCategoryProps> = ({
                 key={index}
                 onClick={() => onClick(option)}
               >
-                <i className="icon"></i>
+                {/* 버튼 안에 아이콘 위치 */}
+                <i className={`icon ${iconClass}`}></i>
                 <span>{option}</span>
               </button>
             ))
@@ -47,7 +50,8 @@ const OptionCategory: React.FC<OptionCategoryProps> = ({
                       key={index}
                       onClick={() => onClick(subOption)}
                     >
-                      <i className="icon"></i>
+                      {/* 버튼 안에 아이콘 위치 */}
+                      <i className={`icon ${iconClass}`}></i>
                       <span>{subOption}</span>
                     </button>
                   ))}

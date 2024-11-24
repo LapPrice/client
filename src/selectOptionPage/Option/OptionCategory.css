@@ -39,11 +39,51 @@
   margin: 0 auto;
 }
 
-.icon {
+.brand-icon {
   width: 24px;
   height: 24px;
   margin-right: 8px;
   background-image : url('../../../public/icons/OptionIcon.svg');
+  background-size: contain;
+}
+
+.cpu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image : url('../../../public/icons/OptionIcon.svg');
+  background-size: contain;
+}
+
+.gpu-icon {
+  width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      background-image : url('../../../public/icons/OptionIcon.svg');
+      background-size: contain;
+    }
+
+.ssd-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image : url('../../../public/icons/SSD.svg');
+  background-size: contain;
+}
+
+.ram-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image : url('../../../public/icons/Ram.svg');
+  background-size: contain;
+}
+
+.inch-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image : url('../../../public/icons/Inch.svg');
   background-size: contain;
 }
 

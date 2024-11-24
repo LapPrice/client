@@ -31,7 +31,7 @@ const SelectOption: React.FC = () => {
   const handleOptionClick = (category: keyof typeof options, option: string) => {
     setOptions((prev) => ({
       ...prev,
-      [category]: prev[category] === option ? "" : option, // 선택된 옵션이면 취소
+      [category]: prev[category] === option ? "" : option,
     }));
   };
 
@@ -40,12 +40,12 @@ const SelectOption: React.FC = () => {
   };
 
   const categories = [
-    { title: "Brand", key: "Brand", options: defaultOptions.Brand },
-    { title: "CPU", key: "CPU", options: defaultOptions.CPU },
-    { title: "GPU", key: "GPU", options: defaultOptions.GPU },
-    { title: "SSD", key: "SSD", options: defaultOptions.SSD },
-    { title: "RAM", key: "RAM", options: defaultOptions.RAM },
-    { title: "Inch", key: "Inch", options: defaultOptions.Inch },
+    { title: "Brand", key: "Brand", options: defaultOptions.Brand, iconClass: "brand-icon" },
+    { title: "CPU", key: "CPU", options: defaultOptions.CPU, iconClass: "cpu-icon" },
+    { title: "GPU", key: "GPU", options: defaultOptions.GPU, iconClass: "gpu-icon" },
+    { title: "SSD", key: "SSD", options: defaultOptions.SSD, iconClass: "ssd-icon" },
+    { title: "RAM", key: "RAM", options: defaultOptions.RAM, iconClass: "ram-icon" },
+    { title: "Inch", key: "Inch", options: defaultOptions.Inch, iconClass: "inch-icon" },
   ];
 
   return (
@@ -61,7 +61,8 @@ const SelectOption: React.FC = () => {
           onClick={(option) =>
             handleOptionClick(category.key as keyof typeof options, option)
           }
-          selectedOption={options[category.key as keyof typeof options]} // 선택된 옵션 전달
+          selectedOption={options[category.key as keyof typeof options]}
+          iconClass={category.iconClass} // 아이콘 클래스 전달
         />
       ))}
       <button className="home-button" onClick={handleNavigateToHome}>
