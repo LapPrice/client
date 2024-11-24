@@ -39,6 +39,8 @@
     border: 1px solid #DBE0E5;
     background: #FFF;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: 900; 
     margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
   }
 

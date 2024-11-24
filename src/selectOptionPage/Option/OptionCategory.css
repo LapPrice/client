@@ -1,3 +1,12 @@
+.icon {
+  background-size: contain;
+  background-repeat: no-repeat; /* 중복 방지 */
+  display: inline-block; /* 크기를 제대로 맞추기 */
+  width: 16px;
+  height: 16px;
+}
+
+
 .option-value-box {
   display: flex;
   padding: 10px;
@@ -16,7 +25,7 @@
   font-family: "Work Sans";
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 23px; /* 127.778% */
 }
 
@@ -65,7 +74,7 @@
 
 .ssd-icon {
   width: 24px;
-  height: 24px;
+  height: 10px;
   margin-right: 8px;
   background-image : url('../../../public/icons/SSD.svg');
   background-size: contain;
@@ -109,8 +118,8 @@
 }
 
 .sub-category-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   margin: 12px 0;
 }
 

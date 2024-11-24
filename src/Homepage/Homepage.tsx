@@ -31,12 +31,30 @@ const Homepage = () => {
       <div onClick={goToSpecificationSelect} style={{ cursor: "pointer" }}>
         <div className="specification-box">
           {/* OptionContext의 상태 값 렌더링 */}
-          <span className="specification-item">{options.Brand}</span>
-          <span className="specification-item">{options.CPU}</span>
-          <span className="specification-item">{options.GPU}</span>
-          <span className="specification-item">{options.SSD}</span>
-          <span className="specification-item">{options.RAM}</span>
-          <span className="specification-item">{options.Inch}</span>
+          <span className="specification-item">
+            <i className="brand-icon"></i>
+            <span>{options.Brand}</span>
+          </span>
+          <span className="specification-item">
+            <i className="cpu-icon"></i>
+            <span>{options.CPU}</span>
+          </span>
+          <span className="specification-item">
+            <i className="gpu-icon"></i>
+            <span>{options.GPU}</span>
+          </span>
+          <span className="specification-item">
+            <i className = "ssd-icon"></i>
+            <span>{options.SSD}</span>
+          </span>
+          <span className="specification-item">
+            <i className="ram-icon"></i>
+            <span>{options.RAM}</span>
+          </span>
+          <span className="specification-item">
+            <i className="inch-icon"></i>
+            <span>{options.Inch}</span>
+          </span>
           <span className="specification-item"></span>
           <span className="specification-item"></span>
         </div>

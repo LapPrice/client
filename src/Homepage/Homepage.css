@@ -8,3 +8,63 @@
     margin: 0 auto;
     padding: 20px;
 }
+
+.brand-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left : 15px;
+    background-image: url('../../../public/icons/OptionIcon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cpu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left : 15px;
+    background-image: url('../../../public/icons/OptionIcon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.gpu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left : 15px;
+    background-image: url('../../public/icons/OptionIcon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ssd-icon {
+    width: 20px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left : 15px;
+    background-image: url('../../public/icons/SSD.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ram-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left : 15px;
+    background-image: url('../../public/icons/Ram.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.inch-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left : 15px;
+    background-image: url('../../public/icons/Inch.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
