@@ -1,0 +1,502 @@
+[
+    {
+        "name": "Laptop Model 1",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 8,
+        "GPU": "External",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 550
+    },
+    {
+        "name": "Laptop Model 2",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 16,
+        "GPU": "Internal",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 600
+    },
+    {
+        "name": "Laptop Model 3",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 32,
+        "GPU": "External",
+        "INCH": 16,
+        "DISK": 1,
+        "price": 650
+    },
+    {
+        "name": "Laptop Model 4",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 64,
+        "GPU": "Internal",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 700
+    },
+    {
+        "name": "Laptop Model 5",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 4,
+        "GPU": "External",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 750
+    },
+    {
+        "name": "Laptop Model 6",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 8,
+        "GPU": "Internal",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 800
+    },
+    {
+        "name": "Laptop Model 7",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 16,
+        "GPU": "External",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 850
+    },
+    {
+        "name": "Laptop Model 8",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 32,
+        "GPU": "Internal",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 900
+    },
+    {
+        "name": "Laptop Model 9",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 64,
+        "GPU": "External",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 950
+    },
+    {
+        "name": "Laptop Model 10",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 4,
+        "GPU": "Internal",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 1000
+    },
+    {
+        "name": "Laptop Model 11",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 8,
+        "GPU": "External",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 1050
+    },
+    {
+        "name": "Laptop Model 12",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 16,
+        "GPU": "Internal",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 1100
+    },
+    {
+        "name": "Laptop Model 13",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 32,
+        "GPU": "External",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 1150
+    },
+    {
+        "name": "Laptop Model 14",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 64,
+        "GPU": "Internal",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 1200
+    },
+    {
+        "name": "Laptop Model 15",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 4,
+        "GPU": "External",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 1250
+    },
+    {
+        "name": "Laptop Model 16",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 8,
+        "GPU": "Internal",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 1300
+    },
+    {
+        "name": "Laptop Model 17",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 16,
+        "GPU": "External",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 1350
+    },
+    {
+        "name": "Laptop Model 18",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 32,
+        "GPU": "Internal",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 1400
+    },
+    {
+        "name": "Laptop Model 19",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 64,
+        "GPU": "External",
+        "INCH": 17,
+        "DISK": 2,
+        "price": 1450
+    },
+    {
+        "name": "Laptop Model 20",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 4,
+        "GPU": "Internal",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 1500
+    },
+    {
+        "name": "Laptop Model 21",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 8,
+        "GPU": "External",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 1550
+    },
+    {
+        "name": "Laptop Model 22",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 16,
+        "GPU": "Internal",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 1600
+    },
+    {
+        "name": "Laptop Model 23",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 32,
+        "GPU": "External",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 1650
+    },
+    {
+        "name": "Laptop Model 24",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 64,
+        "GPU": "Internal",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 1700
+    },
+    {
+        "name": "Laptop Model 25",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 4,
+        "GPU": "External",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 1750
+    },
+    {
+        "name": "Laptop Model 26",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 8,
+        "GPU": "Internal",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 1800
+    },
+    {
+        "name": "Laptop Model 27",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 16,
+        "GPU": "External",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 1850
+    },
+    {
+        "name": "Laptop Model 28",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 32,
+        "GPU": "Internal",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 1900
+    },
+    {
+        "name": "Laptop Model 29",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 64,
+        "GPU": "External",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 1950
+    },
+    {
+        "name": "Laptop Model 30",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 4,
+        "GPU": "Internal",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 2000
+    },
+    {
+        "name": "Laptop Model 31",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 8,
+        "GPU": "External",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 2050
+    },
+    {
+        "name": "Laptop Model 32",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 16,
+        "GPU": "Internal",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 2100
+    },
+    {
+        "name": "Laptop Model 33",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 32,
+        "GPU": "External",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 2150
+    },
+    {
+        "name": "Laptop Model 34",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 64,
+        "GPU": "Internal",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 2200
+    },
+    {
+        "name": "Laptop Model 35",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 4,
+        "GPU": "External",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 2250
+    },
+    {
+        "name": "Laptop Model 36",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 8,
+        "GPU": "Internal",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 2300
+    },
+    {
+        "name": "Laptop Model 37",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 16,
+        "GPU": "External",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 2350
+    },
+    {
+        "name": "Laptop Model 38",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 32,
+        "GPU": "Internal",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 2400
+    },
+    {
+        "name": "Laptop Model 39",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 64,
+        "GPU": "External",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 2450
+    },
+    {
+        "name": "Laptop Model 40",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 4,
+        "GPU": "Internal",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 2500
+    },
+    {
+        "name": "Laptop Model 41",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 8,
+        "GPU": "External",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 2550
+    },
+    {
+        "name": "Laptop Model 42",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 16,
+        "GPU": "Internal",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 2600
+    },
+    {
+        "name": "Laptop Model 43",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 32,
+        "GPU": "External",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 2650
+    },
+    {
+        "name": "Laptop Model 44",
+        "brand": "ASUS",
+        "CPU": "i7",
+        "RAM": 64,
+        "GPU": "Internal",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 2700
+    },
+    {
+        "name": "Laptop Model 45",
+        "brand": "Dell",
+        "CPU": "i9",
+        "RAM": 4,
+        "GPU": "External",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 2750
+    },
+    {
+        "name": "Laptop Model 46",
+        "brand": "HP",
+        "CPU": "Ryzen U",
+        "RAM": 8,
+        "GPU": "Internal",
+        "INCH": 14,
+        "DISK": 256,
+        "price": 2800
+    },
+    {
+        "name": "Laptop Model 47",
+        "brand": "Lenovo",
+        "CPU": "Ryzen H",
+        "RAM": 16,
+        "GPU": "External",
+        "INCH": 15,
+        "DISK": 512,
+        "price": 2850
+    },
+    {
+        "name": "Laptop Model 48",
+        "brand": "Samsung",
+        "CPU": "Celeron",
+        "RAM": 32,
+        "GPU": "Internal",
+        "INCH": 16,
+        "DISK": 1024,
+        "price": 2900
+    },
+    {
+        "name": "Laptop Model 49",
+        "brand": "Acer",
+        "CPU": "i3",
+        "RAM": 64,
+        "GPU": "External",
+        "INCH": 17,
+        "DISK": 2048,
+        "price": 2950
+    },
+    {
+        "name": "Laptop Model 50",
+        "brand": "APPLE",
+        "CPU": "i5",
+        "RAM": 4,
+        "GPU": "Internal",
+        "INCH": 13,
+        "DISK": 128,
+        "price": 3000
+    }
+]

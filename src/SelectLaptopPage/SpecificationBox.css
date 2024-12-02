@@ -1,0 +1,129 @@
+.outer-container {
+    background-color: transparent; /* 배경 제거 */
+    border: none; /* 테두리 제거 */
+    padding: 0; /* 여백 조정 */
+    box-shadow: none; /* 그림자 제거 */
+}
+
+.specification-box, .filter-options { /* 클릭 받도록 */
+    pointer-events: auto; 
+}
+
+
+
+.specification-box {
+    margin-top: 0;
+    margin-bottom : 20px;
+    max-width: 100%; 
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    z-index: 2;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.specification-box:hover {
+    background-color: #D0D0D0;
+    transform: translateY(-5px);
+}   
+
+.specification-item {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #DBE0E6;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #121417;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+/* text를 중앙에 두기위해 둠..*/
+.filter-value {
+    display: inline-block; 
+    text-align: center; 
+    width: 100%; 
+    line-height: normal; 
+}
+
+.specification-item:hover {
+    background-color: #F0F4F8;
+    border-color: #B0BEC5;
+    transform: translateY(-3px);
+}
+
+.specification-item.active {
+    background-color: #4285F4;
+    color: #FFFFFF;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .specification-box {
+        width: 90%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .specification-item {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+.laptop-list {
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20dp;
+    margin-top : 50dp;
+    gap: 10px; /* 각 항목 간격 */
+    margin-top :20dp;
+}
+
+.laptop-item {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.laptop-item:hover {
+    background-color: #F5F5F5;
+}
+
+.laptop-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.laptop-specs {
+    font-weight: Extralight;
+    font-size: 10px;
+    color: #555;
+}

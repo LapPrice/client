@@ -16,10 +16,11 @@ const Homepage = () => {
   };
 
   const onClickGo = async () => {
-    const response = await fetch("http://localhost:8080/api", {
-      method: "GET",
-    });
-    console.log("Data sent to API:", response);
+    // const response = await fetch("http://localhost:8080/api", {
+    //   method: "GET",
+    // });
+    // console.log("Data sent to API:", response);
+    navigate("/select-laptop")
   };
 
   return (
