@@ -8,7 +8,7 @@ const SelectOption: React.FC = () => {
   const navigate = useNavigate();
   const { options, setOptions } = useOption();
 
-  const [categories, setCategories] = useState<any>(null); // 백엔드에서 가져온 데이터를 저장
+  const [categories, setCategories] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -18,7 +18,7 @@ const SelectOption: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch("http://localhost:8080/api/laptop");
+        const response = await fetch("http://localhost:8080/api/laptop/option");
         if (!response.ok) {
           throw new Error("Failed to fetch options");
         }
@@ -26,7 +26,6 @@ const SelectOption: React.FC = () => {
         setCategories({
           Brand: data.brand || [],
           CPU: data.cpu || {},
-          GPU: data.gpu || ["Internal", "External"], 
           SSD: data.ssd || [],
           RAM: data.ram || [],
           Inch: data.inch || [],
@@ -53,11 +52,11 @@ const SelectOption: React.FC = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>; // 로딩 상태
+    return <div>Loading...</div>; 
   }
 
   if (error) {
-    return <div>Error: {error}</div>; // 에러 상태
+    return <div>Error: {error}</div>;
   }
 
   return (
@@ -75,7 +74,7 @@ const SelectOption: React.FC = () => {
               handleOptionClick(key as keyof typeof options, option)
             }
             selectedOption={options[key as keyof typeof options]}
-            iconClass={`${key.toLowerCase()}-icon`} // 예: "brand-icon"
+            iconClass={`${key.toLowerCase()}-icon`}
           />
         ))}
       <button className="home-button" onClick={handleNavigateToHome}>

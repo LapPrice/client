@@ -3,7 +3,6 @@ import React, { createContext, useContext, useState } from "react";
 interface OptionRequest {
   Brand: string;
   CPU: string;
-  GPU: string;
   SSD: string;
   RAM: string;
   Inch: string;
@@ -20,7 +19,6 @@ export const OptionProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [options, setOptions] = useState<OptionRequest>({
     Brand: "Brand",
     CPU: "CPU",
-    GPU: "GPU",
     SSD: "SSD",
     RAM: "RAM",
     Inch: "Inch",
