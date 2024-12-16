@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useOption } from "../selectOptionPage/OptionContext";
+import { OptionRequest, useOption } from "../selectOptionPage/OptionContext";
 import HomepageImage from "./HompageBackground/HomepageBackground";
 import "./Homepage.css";
 import "./SpecificationByText.css";
@@ -23,6 +23,13 @@ const Homepage = () => {
     navigate("/select-laptop")
   };
 
+  const isButtonDisabled = 
+  options.Brand === null ||
+  options.CPU === null ||
+  options.Inch === null ||
+  options.RAM === null ||
+  options.SSD === null
+
   return (
     <div className="Home">
       <HomepageImage />
@@ -34,30 +41,30 @@ const Homepage = () => {
           {/* OptionContext의 상태 값 렌더링 */}
           <span className="specification-item">
             <i className="brand-icon"></i>
-            <span>{options.Brand}</span>
+            <span>{options.Brand ?? "Brand"}</span>
           </span>
           <span className="specification-item">
             <i className="cpu-icon"></i>
-            <span>{options.CPU}</span>
+            <span>{options.CPU ?? "CPU"}</span>
           </span>
           <span className="specification-item">
             <i className = "ssd-icon"></i>
-            <span>{options.SSD}</span>
+            <span>{options.SSD ?? "SSD"}</span>
           </span>
           <span className="specification-item">
             <i className="ram-icon"></i>
-            <span>{options.RAM}</span>
+            <span>{options.RAM ?? "RAM"}</span>
           </span>
           <span className="specification-item">
             <i className="inch-icon"></i>
-            <span>{options.Inch}</span>
+            <span>{options.Inch ?? "INCH"}</span>
           </span>
           <span className="specification-item"></span>
           <span className="specification-item"></span>
           <span className="specification-item"></span>
         </div>
       </div>
-      <button onClick={onClickGo} className="send-button">
+      <button onClick={onClickGo} className="send-button" disabled={isButtonDisabled}>
         GO!
       </button>
     </div>

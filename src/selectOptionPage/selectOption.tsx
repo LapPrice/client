@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import OptionCategory from "./Option/OptionCategory";
-import { useOption } from "./OptionContext";
+import { convertOptionToScheme, useOption } from "./OptionContext";
 import "./selectOption.css";
 
 const SelectOption: React.FC = () => {
@@ -18,7 +18,13 @@ const SelectOption: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch("http://localhost:8080/api/laptop/option");
+        const response = await fetch("http://localhost:8080/api/laptop/option", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(convertOptionToScheme(options)), // 선택된 옵션 전송
+        });
         if (!response.ok) {
           throw new Error("Failed to fetch options");
         }
@@ -43,7 +49,7 @@ const SelectOption: React.FC = () => {
   const handleOptionClick = async(category: keyof typeof options, option: string) => {
     const updatedOptions = {
       ...options,
-      [category]: options[category] === option ? "" : option, // 토글 방식
+      [category]: options[category] === option ? null : option, // 토글 방식
     };
     setOptions(updatedOptions);
     // PATCH API 호출
@@ -53,7 +59,7 @@ const SelectOption: React.FC = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updatedOptions), // 선택된 옵션 전송
+      body: JSON.stringify(convertOptionToScheme(updatedOptions)), // 선택된 옵션 전송
     });
 
     if (!response.ok) {

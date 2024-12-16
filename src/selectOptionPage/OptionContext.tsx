@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
 
-interface OptionRequest {
-  Brand: string;
-  CPU: string;
-  SSD: string;
-  RAM: string;
-  Inch: string;
+export interface OptionRequest {
+  Brand: string | null;
+  CPU: string | null;
+  SSD: string | null;
+  RAM: string | null;
+  Inch: string | null;
 }
 
 interface OptionContextProps {
@@ -13,15 +13,26 @@ interface OptionContextProps {
   setOptions: React.Dispatch<React.SetStateAction<OptionRequest>>;
 }
 
+
+export const convertOptionToScheme = (scheme : OptionRequest) => {
+ return {
+  brand: scheme.Brand,
+  cpuName: scheme.CPU,
+  ssd: scheme.SSD,
+  ram: scheme.RAM,
+  inch: scheme.Inch,
+ }
+}
+
 const OptionContext = createContext<OptionContextProps | undefined>(undefined);
 
 export const OptionProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [options, setOptions] = useState<OptionRequest>({
-    Brand: "Brand",
-    CPU: "CPU",
-    SSD: "SSD",
-    RAM: "RAM",
-    Inch: "Inch",
+    Brand: null,
+    CPU: null,
+    SSD: null,
+    RAM: null,
+    Inch: null,
   });
 
   return (
