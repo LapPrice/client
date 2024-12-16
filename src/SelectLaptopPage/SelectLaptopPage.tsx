@@ -8,9 +8,8 @@ interface Laptop {
   brand: string;
   CPU: string;
   RAM: number;
-  GPU: string;
   INCH: number;
-  DISK: number;
+  SSD: number;
   price: number;
 }
 
@@ -23,7 +22,7 @@ const SelectLaptopPage: React.FC = () => {
   useEffect(() => {
     const fetchLaptopList = async () => {
       try {
-        const response = await fetch("/api/laptopList.json"); // public 폴더의 laptopList.json
+        const response = await fetch("/api/laptop-name-list"); // public 폴더의 laptopList.json
         const data = await response.json();
         setLaptops(data);
       } catch (error) {
@@ -40,8 +39,7 @@ const SelectLaptopPage: React.FC = () => {
         if (options.Brand !== "ALL" && laptop.brand !== options.Brand) return false;
         if (options.CPU !== "ALL" && laptop.CPU !== options.CPU) return false;
         if (options.RAM !== "ALL" && laptop.RAM !== parseInt(options.RAM)) return false;
-        if (options.GPU !== "ALL" && laptop.GPU !== options.GPU) return false;
-        if (options.SSD !== "ALL" && laptop.DISK !== parseInt(options.SSD)) return false;
+        if (options.SSD !== "ALL" && laptop.SSD !== parseInt(options.SSD)) return false;
         if (options.Inch !== "ALL" && laptop.INCH !== parseInt(options.Inch)) return false;
         return true;
       });
@@ -87,7 +85,7 @@ const SelectLaptopPage: React.FC = () => {
             >
               <h3 className="laptop-name">{laptop.name}</h3>
               <p className="laptop-specs">
-                {`CPU: ${laptop.CPU}, RAM: ${laptop.RAM}GB, GPU: ${laptop.GPU}, SSD: ${laptop.DISK}GB, ${laptop.INCH}"`}
+                {`CPU: ${laptop.CPU}, RAM: ${laptop.RAM}GB, SSD: ${laptop.SSD}GB, ${laptop.INCH}"`}
               </p>
             </div>
           ))
