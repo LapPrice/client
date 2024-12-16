@@ -39,7 +39,7 @@
 }
 
 .specification-item:last-child {
-    display: flex;
+    /* display: none; */
     align-items: center;
     justify-content: center;
     width: 250px;
@@ -54,7 +54,7 @@
 }
 
 .specification-item:nth-child(7) {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 250px;
@@ -69,7 +69,22 @@
 }
 
 .specification-item:nth-child(6) {
-    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #121417;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.specification-item:nth-child(8) {
+    display: none;
     align-items: center;
     justify-content: center;
     width: 250px;

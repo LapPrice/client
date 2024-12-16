@@ -13,7 +13,7 @@ interface Laptop {
   price: number;
 }
 
-const SelectLaptopPage: React.FC = () => {
+const SelectLaptopPage = () => {
   const { options } = useOption(); // OptionContext에서 필터링 데이터 가져오기
   const [laptops, setLaptops] = useState<Laptop[]>([]); // 전체 노트북 목록
   const [filteredLaptops, setFilteredLaptops] = useState<Laptop[]>([]); // 필터링된 목록
@@ -57,8 +57,11 @@ const SelectLaptopPage: React.FC = () => {
   fetchLaptopList();
 }, [options]);
 
+  const goToSpecificationSelect = () => {
+    navigate("/select-option");
+  };
 
-  useEffect(() => {
+    useEffect(() => {
     const applyFilters = () => {
       const filtered = laptops.filter((laptop) => {
         if (options.Brand !== "ALL" && laptop.brand !== options.Brand) return false;
@@ -72,7 +75,7 @@ const SelectLaptopPage: React.FC = () => {
       setFilteredLaptops(filtered);
     };
 
-    applyFilters();
+    applyFilters(); 
   }, [options, laptops]);
 
   const goToMarketPrice = (laptop: Laptop) => {
@@ -87,7 +90,7 @@ const SelectLaptopPage: React.FC = () => {
         <span>Filtered by:</span>
       </h2>
       <div className="filter-options">
-        <div className="specification-box">
+        <div onClick={goToSpecificationSelect} className="specification-box">
           {Object.entries(options).map(([key, value]) => (
             <div
               key={key}

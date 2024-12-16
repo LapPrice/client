@@ -13,9 +13,8 @@ interface Laptop {
   brand: string;
   CPU: string;
   RAM: number;
-  GPU: string;
   INCH: number;
-  DISK: number;
+  SSD: number;
   price: number;
 }
 
