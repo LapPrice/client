@@ -41,10 +41,6 @@ const Homepage = () => {
             <span>{options.CPU}</span>
           </span>
           <span className="specification-item">
-            <i className="gpu-icon"></i>
-            <span>{options.GPU}</span>
-          </span>
-          <span className="specification-item">
             <i className = "ssd-icon"></i>
             <span>{options.SSD}</span>
           </span>
@@ -56,6 +52,7 @@ const Homepage = () => {
             <i className="inch-icon"></i>
             <span>{options.Inch}</span>
           </span>
+          <span className="specification-item"></span>
           <span className="specification-item"></span>
           <span className="specification-item"></span>
         </div>
