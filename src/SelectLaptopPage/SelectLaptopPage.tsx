@@ -20,18 +20,43 @@ const SelectLaptopPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchLaptopList = async () => {
-      try {
-        const response = await fetch("/api/laptop-name-list"); // public 폴더의 laptopList.json
-        const data = await response.json();
-        setLaptops(data);
-      } catch (error) {
-        console.error("Error loading laptop list:", error);
-      }
-    };
+  const fetchLaptopList = async () => {
+    try {
+      // 필터링된 조건을 URL 파라미터로 변환
+      const params = new URLSearchParams({
+        brand: options.Brand !== "ALL" ? options.Brand : "",
+        cpu: options.CPU !== "ALL" ? options.CPU : "",
+        ram: options.RAM !== "ALL" ? options.RAM : "",
+        ssd: options.SSD !== "ALL" ? options.SSD : "",
+        inch: options.Inch !== "ALL" ? options.Inch : "",
+      });
 
-    fetchLaptopList();
-  }, []);
+      // 서버에 GET 요청을 보내 필터링된 데이터를 가져옴
+      const response = await fetch(`http://localhost:8080/api/laptop/laptop-name-list?${params.toString()}`, {
+        method: "GET",
+      });
+
+      const data = await response.json();
+      const laptops = data.laptopList || [];
+      const formattedData = laptops.map((item: any) => ({
+        name: item.lapTopName,
+        brand: item.brand,
+        CPU: item.cpu,
+        RAM: item.ram,
+        SSD: item.ssd,
+        INCH: item.inch,
+        price: item.price,
+      }));
+
+      setFilteredLaptops(formattedData);
+    } catch (error) {
+      console.error("Error loading laptop list:", error);
+    }
+  };
+
+  fetchLaptopList();
+}, [options]);
+
 
   useEffect(() => {
     const applyFilters = () => {
