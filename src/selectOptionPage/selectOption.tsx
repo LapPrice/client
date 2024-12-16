@@ -48,8 +48,8 @@ const SelectOption: React.FC = () => {
     setOptions(updatedOptions);
     // PATCH API 호출
   try {
-    const response = await fetch("http://localhost:8080/api/laptop/update-options", {
-      method: "PATCH",
+    const response = await fetch("http://localhost:8080/api/laptop/option", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
