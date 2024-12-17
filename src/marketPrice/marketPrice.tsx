@@ -107,12 +107,6 @@ const MarketPricePage: React.FC = () => {
           );
         })}
       </div>
-
-      <div className="more-info-container">
-        <button className="more-info" onClick={() => navigate("/more-info")}>
-          More Information
-        </button>
-      </div>
     </div>
   );
 };
