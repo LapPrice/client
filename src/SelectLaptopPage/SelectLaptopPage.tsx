@@ -33,7 +33,7 @@ const SelectLaptopPage = () => {
 
         console.log("Request Params:", params); // 서버에 보낼 요청 데이터 확인
 
-        const response = await fetch(`http://localhost:8080/api/laptop/laptop-name-list`, {
+        const response = await fetch(`http://43.203.181.135:8080/api/laptop/laptop-name-list`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(params),

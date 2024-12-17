@@ -18,7 +18,7 @@ const SelectOption: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch("http://localhost:8080/api/laptop/option", {
+        const response = await fetch("http://43.203.181.135:8080/api/laptop/option", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const SelectOption: React.FC = () => {
     setOptions(updatedOptions);
     // PATCH API 호출
   try {
-    const response = await fetch("http://localhost:8080/api/laptop/option", {
+    const response = await fetch("http://43.203.181.135:8080/api/laptop/option", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const SelectOption: React.FC = () => {
             onClick={(option) =>
               handleOptionClick(key as keyof typeof options, option)
             }
-            selectedOption={options[key as keyof typeof options]}
+            selectedOption={options[key as keyof typeof options] ?? undefined}
             iconClass={`${key.toLowerCase()}-icon`}
           />
         ))}

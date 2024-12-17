@@ -46,7 +46,7 @@ const MarketPricePage: React.FC = () => {
           price: selectedLaptop.price,
         };
 
-        const response = await fetch("http://localhost:8080/api/laptop/marketPrice", {
+        const response = await fetch("http://43.203.181.135:8080/api/laptop/marketPrice", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(requestPayload),
