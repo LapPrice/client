@@ -19,33 +19,36 @@ const SelectLaptopPage = () => {
   const [filteredLaptops, setFilteredLaptops] = useState<Laptop[]>([]); // 필터링된 목록
   const navigate = useNavigate();
 
+  // 서버에서 노트북 목록 가져오기
   useEffect(() => {
     const fetchLaptopList = async () => {
       try {
-        const params = new URLSearchParams();
+        const params = {
+          brand: options.Brand && options.Brand !== "ALL" ? options.Brand : null,
+          cpu: options.CPU && options.CPU !== "ALL" ? options.CPU : null,
+          ram: options.RAM && options.RAM !== "ALL" ? Number(options.RAM) : null,
+          ssd: options.SSD && options.SSD !== "ALL" ? Number(options.SSD) : null,
+          inch: options.Inch && options.Inch !== "ALL" ? Number(options.Inch) : null,
+        };
 
-        // 조건에 맞는 값만 URL에 추가하고, 숫자는 문자열로 변환
-        if (options.Brand && options.Brand !== "ALL") params.append("brand", options.Brand);
-        if (options.CPU && options.CPU !== "ALL") params.append("cpu", options.CPU);
-        if (options.RAM && options.RAM !== "ALL") params.append("ram", String(options.RAM));
-        if (options.SSD && options.SSD !== "ALL") params.append("ssd", String(options.SSD));
-        if (options.Inch && options.Inch !== "ALL") params.append("inch", String(options.Inch));
+        console.log("Request Params:", params); // 서버에 보낼 요청 데이터 확인
 
-
-        const response = await fetch(
-          `http://localhost:8080/api/laptop/laptop-name-list?${params.toString()}`,
-          {
-            method: "GET",
-          }
-        );
+        const response = await fetch(`http://localhost:8080/api/laptop/laptop-name-list`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(params),
+        });
 
         if (!response.ok) {
           throw new Error("Failed to fetch laptop list");
         }
 
         const data = await response.json();
+        console.log("Response Data:", data); // 서버에서 받은 데이터 확인
+
         const laptops = Array.isArray(data.laptopList) ? data.laptopList : [];
 
+        // 서버 데이터 매핑
         const formattedData = laptops.map((item: any) => ({
           name: item.lapTopName,
           brand: item.brand,
@@ -66,17 +69,22 @@ const SelectLaptopPage = () => {
     fetchLaptopList();
   }, [options]);
 
+  // 필터링 로직
   useEffect(() => {
     const applyFilters = () => {
+      console.log("Laptops before filtering:", laptops);
+
       const filtered = laptops.filter((laptop) => {
-        if (options.Brand !== "ALL" && laptop.brand !== options.Brand) return false;
-        if (options.CPU !== "ALL" && laptop.CPU !== options.CPU) return false;
-        if (options.RAM !== "ALL" && laptop.RAM !== Number(options.RAM)) return false;
-        if (options.SSD !== "ALL" && laptop.SSD !== Number(options.SSD)) return false;
-        if (options.Inch !== "ALL" && laptop.INCH !== Number(options.Inch)) return false;
-        return true;
+        return (
+          (!options.Brand || options.Brand === "ALL" || laptop.brand === options.Brand) &&
+          (!options.CPU || options.CPU === "ALL" || laptop.CPU === options.CPU) &&
+          (!options.RAM || options.RAM === "ALL" || laptop.RAM === Number(options.RAM)) &&
+          (!options.SSD || options.SSD === "ALL" || laptop.SSD === Number(options.SSD)) &&
+          (!options.Inch || options.Inch === "ALL" || laptop.INCH === Number(options.Inch))
+        );
       });
 
+      console.log("Filtered Laptops:", filtered);
       setFilteredLaptops(filtered);
     };
 
@@ -100,11 +108,7 @@ const SelectLaptopPage = () => {
       <div className="filter-options">
         <div onClick={goToSpecificationSelect} className="specification-box">
           {Object.entries(options).map(([key, value]) => (
-            <div
-              key={key}
-              className="specification-item"
-              onClick={() => console.log(`${key}: ${value}`)}
-            >
+            <div key={key} className="specification-item">
               <span className="filter-value">{value}</span>
             </div>
           ))}

@@ -64,7 +64,7 @@ const Homepage = () => {
           <span className="specification-item"></span>
         </div>
       </div>
-      <button onClick={onClickGo} className="send-button" disabled={isButtonDisabled}>
+      <button onClick={onClickGo} className="send-button" >
         GO!
       </button>
     </div>
