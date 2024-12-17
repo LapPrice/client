@@ -97,7 +97,7 @@ const MarketPricePage: React.FC = () => {
                   <div
                     key={index}
                     className="price-item"
-                    onClick={() => window.open(`https://${item.sourceURL}`, "_blank")}
+                    onClick={() => window.open(`${item.sourceURL}`, "_blank")}
                   >
                     {item.price.toLocaleString()}원
                   </div>
