@@ -1,68 +1,106 @@
-.average-price {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #0078d4;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-  
-  .platform-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 20px;
-  }
-  
-  .platform-box {
-    background-color: #ffffff;
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .platform-box img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .platform-box h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #333;
-  }
-  
-  .price-item {
-    font-size: 16px;
-    margin: 5px 0;
-    font-weight: bold;
-    color: #0078d4;
-  }
-  
-  .price-item:hover {
-    color: #005bb5;
-    cursor: pointer;
-  }
-  
-  .platform-box button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #0078d4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .platform-box button:hover {
-    background-color: #005bb5;
-  }
-  
+.price-page {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  width: 100%;  /* 가격 페이지를 전체 너비로 설정 */
+  padding: 0 20px;  /* 페이지 좌우 여백 추가 */
+}
+
+.central-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 세 섹션을 가로로 배치 */
+.market-section-container {
+  display: flex; /* 가로 배치 */
+  justify-content: space-around; /* 섹션 간격 */
+  margin-top: 30px;
+  flex-wrap: wrap; /* 화면 크기에 맞게 섹션을 줄 바꿈 */
+}
+
+/* 각 섹션 스타일 */
+.market-section {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 30%; /* 각 섹션의 너비를 조절 */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* 리스트를 세로로 배치 */
+  align-items: center;
+  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+}
+
+/* 아이콘 스타일 수정 */
+.market-icon {
+  width: 30px; /* 아이콘 너비 고정 */
+  height: 30px; /* 아이콘 높이 고정 */
+  object-fit: contain; /* 비율 유지하면서 이미지 축소/확대 */
+  margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
+}
+
+/* 아이콘과 평균 시세가 수평으로 배치될 수 있도록 */
+.comparision-header {
+  display: flex; /* 아이콘과 평균을 수평으로 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 10px; /* 아이콘과 텍스트 사이 여백 */
+  margin-bottom: 10px; /* 리스트와의 간격 */
+}
+
+/* 가격 리스트 스타일 */
+.price-list {
+  display: flex;
+  flex-direction: column; /* 리스트는 세로로 */
+  margin-top: 10px;
+  width: 100%; /* 리스트가 섹션 너비에 맞도록 */
+  overflow-y: scroll;
+}
+
+.price-item {
+  font-size: 18px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.price-item:hover {
+  text-decoration: underline;
+}
+
+.more-info-container {
+  margin-top: 20px; /* 리스트와의 간격 */
+  text-align: center;
+  position: relative; /* 절대 위치를 위한 기준 */
+  top: 20px; /* 섹션 바로 아래에 배치 */
+  width: 100%; /* 전체 너비 사용 */
+}
+
+.more-info {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 버튼에 그림자 효과 */
+} 
+
+.more-info:hover {
+  background-color: #e6b800;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* hover 시 그림자 효과 강화 */
+}
+
+
+/* 기존 마켓 섹션의 price-list와 버튼 간 간격 */
+.market-section .price-list {
+  margin-bottom: 30px; /* 버튼과의 간격을 위해 여백 추가 */
+}
