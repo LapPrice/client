@@ -20,69 +20,77 @@ const SelectLaptopPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  const fetchLaptopList = async () => {
-    try {
-      // 필터링된 조건을 URL 파라미터로 변환
-      const params = new URLSearchParams({
-        brand: options.Brand !== "ALL" ? options.Brand : "",
-        cpu: options.CPU !== "ALL" ? options.CPU : "",
-        ram: options.RAM !== "ALL" ? options.RAM : "",
-        ssd: options.SSD !== "ALL" ? options.SSD : "",
-        inch: options.Inch !== "ALL" ? options.Inch : "",
-      });
+    const fetchLaptopList = async () => {
+      try {
+        const params = new URLSearchParams();
 
-      // 서버에 GET 요청을 보내 필터링된 데이터를 가져옴
-      const response = await fetch(`http://localhost:8080/api/laptop/laptop-name-list?${params.toString()}`, {
-        method: "GET",
-      });
+        // 조건에 맞는 값만 URL에 추가하고, 숫자는 문자열로 변환
+        if (options.Brand && options.Brand !== "ALL") params.append("brand", options.Brand);
+        if (options.CPU && options.CPU !== "ALL") params.append("cpu", options.CPU);
+        if (options.RAM && options.RAM !== "ALL") params.append("ram", String(options.RAM));
+        if (options.SSD && options.SSD !== "ALL") params.append("ssd", String(options.SSD));
+        if (options.Inch && options.Inch !== "ALL") params.append("inch", String(options.Inch));
 
-      const data = await response.json();
-      const laptops = data.laptopList || [];
-      const formattedData = laptops.map((item: any) => ({
-        name: item.lapTopName,
-        brand: item.brand,
-        CPU: item.cpu,
-        RAM: item.ram,
-        SSD: item.ssd,
-        INCH: item.inch,
-        price: item.price,
-      }));
 
-      setFilteredLaptops(formattedData);
-    } catch (error) {
-      console.error("Error loading laptop list:", error);
-    }
-  };
+        const response = await fetch(
+          `http://localhost:8080/api/laptop/laptop-name-list?${params.toString()}`,
+          {
+            method: "GET",
+          }
+        );
 
-  fetchLaptopList();
-}, [options]);
+        if (!response.ok) {
+          throw new Error("Failed to fetch laptop list");
+        }
 
-  const goToSpecificationSelect = () => {
-    navigate("/select-option");
-  };
+        const data = await response.json();
+        const laptops = Array.isArray(data.laptopList) ? data.laptopList : [];
 
-    useEffect(() => {
+        const formattedData = laptops.map((item: any) => ({
+          name: item.lapTopName,
+          brand: item.brand,
+          CPU: item.cpu,
+          RAM: item.ram,
+          SSD: item.ssd,
+          INCH: item.inch,
+          price: item.price,
+        }));
+
+        setLaptops(formattedData);
+        setFilteredLaptops(formattedData); // 초기 필터링 결과 설정
+      } catch (error) {
+        console.error("Error loading laptop list:", error);
+      }
+    };
+
+    fetchLaptopList();
+  }, [options]);
+
+  useEffect(() => {
     const applyFilters = () => {
       const filtered = laptops.filter((laptop) => {
         if (options.Brand !== "ALL" && laptop.brand !== options.Brand) return false;
         if (options.CPU !== "ALL" && laptop.CPU !== options.CPU) return false;
-        if (options.RAM !== "ALL" && laptop.RAM !== parseInt(options.RAM)) return false;
-        if (options.SSD !== "ALL" && laptop.SSD !== parseInt(options.SSD)) return false;
-        if (options.Inch !== "ALL" && laptop.INCH !== parseInt(options.Inch)) return false;
+        if (options.RAM !== "ALL" && laptop.RAM !== Number(options.RAM)) return false;
+        if (options.SSD !== "ALL" && laptop.SSD !== Number(options.SSD)) return false;
+        if (options.Inch !== "ALL" && laptop.INCH !== Number(options.Inch)) return false;
         return true;
       });
 
       setFilteredLaptops(filtered);
     };
 
-    applyFilters(); 
+    applyFilters();
   }, [options, laptops]);
+
+  const goToSpecificationSelect = () => {
+    navigate("/select-option");
+  };
 
   const goToMarketPrice = (laptop: Laptop) => {
     console.log("Navigating with laptop:", laptop);
     navigate("/marketPrice", { state: { selectedLaptop: laptop } });
   };
-  
 
   return (
     <div className="outer-container">
